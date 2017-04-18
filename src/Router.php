@@ -2,7 +2,7 @@
 
 namespace rgehan\RouterPHP;
 
-use InvalidArgumentException;
+use rgehan\RouterPHP\Exceptions\NoSuchRouteException;
 
 class Router
 {
@@ -165,7 +165,7 @@ class Router
         
         // If there is no matching route
         if(!isset(self::$routes[$verb][$route]))
-            throw new Exception("Couldn't find any matching route!");
+            throw new NoSuchRouteException("Couldn't find any matching route!");
 
         // Gets the route data
         $routeData = self::$routes[$verb][$route];
