@@ -1,0 +1,17 @@
+{
+    "name": "rgehan/router-php",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Renan GEHAN",
+            "email": "rgehan94@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "rgehan\\RouterPHP\\": "src/",
+            "rgehan\\tests\\": "controllers/"
+        }
+    }
+}
