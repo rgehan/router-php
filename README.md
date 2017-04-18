@@ -23,7 +23,7 @@ require_once(__DIR__ . "/../vendor/autoload.php");
 use rgehan\RouterPHP\Router;
 
 // Sets the namespace in which the Router will look for controllers
-Router::setControllerNamespace('\\rgehan\\derbydog\\controllers\\');
+Router::setControllerNamespace('\\rgehan\\myProject\\controllers\\');
 
 // Sets the variables that will be passed to all controllers methods
 Router::setRoutesGlobalParameters(['global variable 1', 123, [1, 2, 3]]);
