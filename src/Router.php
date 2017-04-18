@@ -6,7 +6,7 @@ use InvalidArgumentException;
 
 class Router
 {
-    private static $controllerNamespace = "rgehan\\RouterPHP\\controllers\\";
+    private static $controllerNamespace = "";
 
     private static $routes = [
         'GET' => [],
@@ -163,17 +163,18 @@ class Router
         $route = $_SERVER['REQUEST_URI'];
         $route = self::cleanupPath($route);
         
-        // If we have such a controller and a method        
-        if(isset(self::$routes[$verb][$route]))
-        {
-            $data = self::$routes[$verb][$route];
-            
-            // Extracts the controller and its method names
-            $method = $data['method'];
-            $controller = new $data['controller'];
+        // If there is no matching route
+        if(!isset(self::$routes[$verb][$route]))
+            throw new Exception("Couldn't find any matching route!");
 
-            // Calls the method and pass the global parameters
-            call_user_func_array([$controller, $method], self::$globalParams);
-        }
+        // Gets the route data
+        $routeData = self::$routes[$verb][$route];
+        
+        // Extracts the controller and its method names
+        $method = $routeData['method'];
+        $controller = new $routeData['controller'];
+
+        // Calls the method and pass the global parameters
+        call_user_func_array([$controller, $method], self::$globalParams);
     }
 }
