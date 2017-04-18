@@ -2,6 +2,8 @@
 
 namespace rgehan\RouterPHP\Exceptions;
 
+use \Exception;
+
 class NoSuchRouteException extends Exception
 {
     public function __construct($message, $code = 0, Exception $previous = null)
