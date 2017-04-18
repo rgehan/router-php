@@ -1,6 +1,9 @@
 {
     "name": "rgehan/router-php",
+    "description": "A really simple dependency-free PHP router",
     "type": "library",
+    "minimum-stability": "stable",
+    "license": "MIT",
     "authors": [
         {
             "name": "Renan GEHAN",
@@ -10,8 +13,7 @@
     "require": {},
     "autoload": {
         "psr-4": {
-            "rgehan\\RouterPHP\\": "src/",
-            "rgehan\\tests\\": "controllers/"
+            "rgehan\\RouterPHP\\": "src/"
         }
     }
 }
