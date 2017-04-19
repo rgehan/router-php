@@ -1,5 +1,5 @@
 {
-    "name": "rgehan/router-php",
+    "name": "rgehan/router",
     "description": "A really simple dependency-free PHP router",
     "type": "library",
     "minimum-stability": "stable",
