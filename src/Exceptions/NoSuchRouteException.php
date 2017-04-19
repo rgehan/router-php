@@ -1,6 +1,6 @@
 <?php
 
-namespace rgehan\RouterPHP\Exceptions;
+namespace rgehan\router\Exceptions;
 
 use \Exception;
 

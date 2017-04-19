@@ -1,8 +1,8 @@
 <?php
 
-namespace rgehan\RouterPHP;
+namespace rgehan\router;
 
-use rgehan\RouterPHP\Exceptions\NoSuchRouteException;
+use rgehan\router\Exceptions\NoSuchRouteException;
 
 class Router
 {
