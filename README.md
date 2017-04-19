@@ -8,7 +8,7 @@ I loosely imitates Laravel router.
 ## Installation
 Simple require it with Composer
 ```
-composer require rgehan/router-php
+composer require rgehan/router
 ```
 
 ## Usage
